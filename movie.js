@@ -20,7 +20,7 @@ class movie {
     }
     static getPG(movies) {
           let result = movies.filter((x) => {
-              if (x.rating === "PG") return x;
+              return x.rating === "PG" || x.rating === "pg";
           });
           return result;
       }
@@ -37,7 +37,7 @@ class movie {
   // c) Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
   
   const movie1 = new movie("RRR", " D. V. V. Danayya ", "U/A");
-  const movie2 = new movie("Vikram", "Raaj Kamal Films ",);
+  const movie2 = new movie("Vikram", "Raaj Kamal Films ","pg");
   const movie3 = new movie("KGF 2", "Hombale Films", "PG");
   
   let movies = [movie1, movie2, movie3];
